@@ -1,0 +1,58 @@
+<div>
+
+<div class="searchformHeadline">Find a Cruise <span>Advanced Search</span></div>
+
+<!--<div class="searchFilterCount" id="SailingsLBL"><span class="itineraryNumber">%</span> Itineraries Found</div>-->
+
+<label style="display:none;">Destination</label>
+
+<OFramework:DropdownList id="Destination" listWidth="210px" tabindex="1"><item id="" name="Any Destination"></item></OFramework:DropdownList>
+
+<label style="display:none;">Sail Date</label>
+
+<div class="sdate">
+
+	<OFramework:DropdownList id="Month" listWidth="210px" tabindex="2"><item id="" name="Any Sailing Date"></item></OFramework:DropdownList>
+
+</div>
+
+<label style="display:none;">Cruise Length</label>
+
+	<OFramework:DropdownList id="Length" listWidth="210px" tabindex="3"><item id="" name="Any Length"></item></OFramework:DropdownList>
+<!--
+<label style="display:none;">Cruise Line</label>
+
+<OFramework:DropdownList id="CruiseLine" listWidth="210px" tabindex="4"><item id="" name="Any Cruise Line"></item></OFramework:DropdownList>
+
+<label style="display:none;">Cruise Ship</label>
+
+<OFramework:DropdownList id="Ship" listWidth="210px" tabindex="5"><item id="" name="Any Cruise Ship"></item></OFramework:DropdownList>
+
+<label style="display:none;">Departure Port</label>
+
+<OFramework:DropdownList id="Departure" listWidth="210px" tabindex="6"><item id="" name="Any Departure Port"></item></OFramework:DropdownList>
+
+<label style="display:none;">Price Range</label>
+
+<OFramework:DropdownList id="PriceRange" listWidth="210px" tabindex="7">
+
+    <item id="" name="Any Price Range"></item>
+
+    <item id="1" name="$0 - $1,000"></item>
+
+    <item id="2" name="$1,001 - $2,000"></item>
+
+    <item id="3" name="$2,001 - $4,000"></item>
+
+    <item id="4" name="$4,001+"></item>
+
+</OFramework:DropdownList>
+-->
+<input type="radio" value="29" id="TTypeCruiseOnly" name="TTypeOption" style="display:none">
+
+<input type="radio" value="28" id="TTypeCruiselineTour" name="TTypeOption" style="display:none">
+
+<input type="button" id="SearchBTN" class="search-button" value="Find a Cruise" onclick="Container.SubmitSearch()"/>
+
+</div>
+

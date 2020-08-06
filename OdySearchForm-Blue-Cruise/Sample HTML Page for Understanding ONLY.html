@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Odysseus Search Forms - Test - Odysseus</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- 
+
+        script tag details:
+
+        1. be sure to change the src= URL to https://******/web/SearchForms/OFramework.js  -- where ****** is your domain setup with odysseus. Note, if the domain is not setup with Odysseus, it will not work.
+
+		2. ThemeURI - this tells our code where to load the core template from. This should be a relative path.
+
+		if you place the HTML file in the root directory, you should place the folder in that same directory. If you change the path of that folder, please update the path appropriately. 
+
+        3. this script tag should be on the top of the page, preferably inside the <head> element
+
+        -->
+
+        <script type="text/javascript" language="javascript" id="OFrameworkJS" ThemeURI="OdySearchForm-Blue-Cruise/" SkinID="default" src="http://demo64.odysol.com/web/SearchForms/OFramework.js" ></script>
+		
+		<style>
+			.OFContainer {
+				width: 860px;
+				max-width: 100%;
+				margin: 20px auto 10px;
+			}
+			.OFContainer .searchformHeadline {
+				font-size: 24px;
+				font-weight: 500;
+				color: #A4B1C4;
+			}
+			.OFContainer .searchformHeadline span {
+				font-size: 14px;
+				float: right;
+				text-align: right;
+			}
+			.OFContainer .dropdown {
+				background: #fff;
+				border-bottom: 1px solid #21326C;
+				padding-left: 0;
+				font-size: 1rem;
+				float: left;
+				margin-right: 15px;
+				box-sizing: border-box;
+				height: 35px;
+			}
+			.OFContainer .dropdown:before {
+				content: '';
+				background-image: url('OdySearchForm-Blue-Cruise/images/expand-arrow.png');
+				display: block;
+				position: absolute;
+				right: 0;
+				width: 12px;
+				height: 12px;
+				top: 10px;
+				background-size: 14px;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.OFContainer .search-button {
+				background: #21326c;
+				border: 1px solid #21326c;
+				font-size: 16px;
+				font-weight: 400;
+				width: 150px;
+				padding: .625rem 1rem;
+				margin: 0;
+				float: right;
+			}
+			
+			@media (max-width: 991px) {
+				.OFContainer {
+					width: 360px;
+				}
+				.OFContainer .dropdown,
+				.OFContainer .search-button {
+					float: none;
+					margin: 20px 0;
+				}
+			}
+		</style>
+    </head>
+
+    <body>
+
+		<div id="CruiseSearchForm"></div>
+
+    </body>
+
+</html>
+
+<!-- 
+
+script tag details:
+
+1. this script should be at the bottom of the page, towards the end
+
+2. must add proper siid
+
+-->
+
+<script language="javascript" type="text/javascript">
+
+    if (OFramework != null) {
+
+        OFramework.QSParams.Add("siid", "1"); // change this with your valid siid (odysseus generated ID for each website/affiliate - unique per site)
+
+        OFramework.QSParams.Add("referrer", "testing query string add"); // be sure to remove this or set the right value here - for  example only
+
+
+
+        oCForm = OFramework.CruiseSearchForm(document.getElementById("CruiseSearchForm"));
+
+        oCForm.Target = "_new"; //use this only if you want the search results to open in a different page
+		
+		//oCForm = OFramework.CruiseSearchForm(document.getElementById("CruiseSearchForm"), Suppliers.Brands.Destination.Duration.Port.Date.TransportationType);
+		
+    }
+
+</script>
+
